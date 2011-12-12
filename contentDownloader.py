@@ -4,7 +4,8 @@ import sys
 import urlparse
 
 site = sys.argv[1] 
-fileTypes = ["pdf", "doc", "cvs", "jpeg", "jpg", "avi", "mpeg", "rm", "mpg", 		"mp4", "wmv", "rm", "ram", "mov", "mp3"] 
+fileTypes = ["pdf", "doc", "cvs", "jpeg", "jpg", "avi", "mpeg", "rm", "mpg", 		
+		"mp4", "wmv", "rm", "ram", "mov", "mp3"] 
 
 def checkFileType(link, extension):
 	return extension in fileTypes
