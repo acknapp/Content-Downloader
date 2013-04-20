@@ -9,12 +9,17 @@ FILE_TYPES = ["pdf", "doc", "cvs", "jpeg", "jpg", "avi", "mpeg", "rm", "mpg",
 
 
 def check_file_type(link, extension):
-    '''Checks for known file types'''
+    """Checks for known file types
+    :param link:
+    :param extension:
+    """
     return extension in FILE_TYPES
 
 
 def download_content(site):
-    '''Checks each link on a site to see if it is a known filetype'''
+    """Checks each link on a site to see if it is a known filetype
+    :param site:
+    """
     try:
         oSite = urllib2.urlopen(site).read()
         soup = BeautifulSoup.BeautifulSoup(oSite)
