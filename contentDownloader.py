@@ -53,13 +53,9 @@ def download_content(site):
     n = 1
     for page in soup.findAll("a"):
         lnk = page['href'].encode('latin-1')
-        print "lnk: " + lnk #DEBUG
         lnk2 = urlparse.urljoin(site, lnk)
         temp = lnk2.rsplit('.', 1)
-        print "lnk2: " + lnk2 #DEBUG
-        print "temp: " + temp[1]
         if check_file_type(lnk2, temp[1]):
-            print "completes if statement" #DEBUG
             save_content(lnk2, temp[1], n)
             n += 1
     # except:
